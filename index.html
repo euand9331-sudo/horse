@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Eventing Rider Heart Rate Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Eventing Rider Heart Rate Checker</h1>
+  <p>Enter a rider's resting and max heart rate, then click Check.</p>
+<label>Resting HR: <input type="number" id="resting-hr" placeholder="Resting HR"></label><br><br>
+<label>Maximum HR: <input type="number" id="max-hr" placeholder="Resting HR"></label><br><br>
+<label>Intensity (%): <input type="number" id="intensity" placeholder="e.g. 60"></label><br><br>
+    <button id="calc-btn">Check</button>
+<h3 id="result"></h3>
+
+<table id="results-table" border="1">
+  <tr>
+    <th>Position</th>
+    <th>Heart Rate</th>
+    <th>% of Reserve</th>
+    <th>Label</th>
+      <th>Lactate (mmol/L</th>
+  </tr>
+</table>
+    <h3 id="result"></h3>
+    <button id="download-btn">Download stats</button>
+  <script src="script.js"></script>
+    
+    <style>
+    body{
+        font-family : 'Montserrat', sans-serif;
+        background-image: linear-gradient(aqua, lightblue);
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+
+    }
+        h1{
+            text-align : center;
+        }
+        p{
+            text-align : center;
+        }
+        
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+    border-radius : 25px;
+    
+}
+
+input {
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+    border-radius : 25px;
+}
+        label {
+  display: block;
+  text-align: center;
+}
+        h3{
+            text-align : center;
+        }
+button:hover{
+    font-size : 15px;
+    transition-duration: 0.4s;
+}
+        #results-table {
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+#results-table th, #results-table td {
+  padding: 10px 20px;
+}
+    </style>
+</body>
+</html>
